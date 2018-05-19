@@ -5,11 +5,6 @@ This is the journal module.
 """
 
 
-
-
-
-
-
 def load(name):
     """
     This mephod creates and loads a new method.
@@ -17,7 +12,7 @@ def load(name):
     :param name: The name of the journal to load.
     :return: A new journal data structure
     """
-
+    
     data = []
     filename = getFullPath(name)
 
@@ -25,8 +20,6 @@ def load(name):
         with open(filename) as fin:
             for entry in fin.readlines():
                data.append(entry.rstrip())
-
-
 
     return data
 
